@@ -1,0 +1,265 @@
+#header{
+	width:100%;
+	height:190px;
+	
+}
+.clearfix{
+	clear:both;
+}
+
+.headertop{
+	width:100%;
+	height:35px;
+	background-color:#F3F3F3;
+}
+.headertop .headcontent{
+	width:1200px;
+	height:100%;
+	margin: 0 auto;
+	color:#7B7B7B;
+	font-size:12px;
+}
+.headertop .headcontent span a{
+	color:#333;
+}
+.headertop .headcontent span a:hover{
+	color:red;
+}
+.headertop .headcontent span:nth-child(1){
+	line-height:35px;
+	margin-left:30px;
+}
+.row{
+	width:1200px;
+	height: 115px;
+
+	margin:0 auto;
+}
+.nav{
+	height:35px;
+	width:100%;	
+	
+}
+.logo{
+	width:200px;
+	height:110px;
+	float:left;
+}
+.logo img{
+	margin-top:30px;
+	width:200px;
+	
+}
+.ppby{
+	width:300px;
+	height:110px;
+	color:#008EDA;
+	float:left;
+	font-size:18px;
+	font-family: "微软雅黑";
+	font-weight: 900;
+	line-height: 110px;text-align: center;
+}
+.search{
+	height:60px;
+	width:400px;
+	
+	float:right;
+	padding-top:40px;
+}
+.nav-form{
+	width:286px;
+	height: 38px;
+	border:1px solid #e0e0e0;
+	float:left;
+}
+.search button{
+	width:50px;
+	height:40px;
+	
+}
+.search button img{
+	width:25px;
+}
+.nav .navcontent{
+	width:1200px;
+	height:35px;
+	margin:0 auto;
+}
+
+
+
+.navfloat{
+	position: absolute;
+	width:100px;
+	height:3px;
+	background: #0EC7E5;
+}
+
+
+.navcontent>ul{
+	position: relative;
+	width:800px;
+	height:35px;
+	text-align: center;
+	margin-left:190px;
+}
+.navcontent>ul>li{
+	width:100px;
+	float:left;
+	line-height:35px;
+	cursor: pointer;
+}
+
+.navcontent>ul>li>div{
+	width:100px;
+	position:absolute;
+	top:35px;
+	z-index: 10;
+	font-size:12px;
+	color:white;
+}
+.navcontent>ul>li>div>span{
+	display: block;
+	height:30px;
+	background-color: #000000;
+}
+.navcontent>ul>li>div>span:hover{
+	color:white;
+	background-color:#FF6600;
+}
+
+.n-first{
+	width:180px;
+	height:35px;
+	float:left;
+	cursor: pointer;
+	text-align: center;
+	position:relative;
+	font: bold 14px "微软雅黑";
+	line-height: 35px;
+	color:white;
+	background: url(../images/title_bg.gif) repeat left center;
+}
+
+.n-first .sidebar{
+	width:180px;
+	height:500px;
+	background:rgba(204,204,204,0.8);
+	position:absolute;
+	z-index:10;
+	top:38px;
+	
+}
+/*end 头部样式*/
+
+
+.banner{
+	width:100%;
+	height:500px;
+	background: #F3F3F3;
+	position:relative;
+	/*overflow: hidden;*/
+	margin-bottom:50px;
+	z-index:2;
+	
+}
+.banner .bgimg{
+	position:absolute;
+	z-index:-1;
+	width:100%;
+	height:500px;
+	overflow: hidden;
+	background:url(../images/banner-1.jpg) repeat-x;
+	filter: blur(3px);
+}
+
+
+/*按钮区域控制*/
+.banner .an{
+	width:1200px;
+	height:500px;
+	position:absolute;
+	left:50%;
+	transform:translateX(-50%);
+	z-index:50;
+}
+
+/*小图标*/
+.an .b_icon{
+	width:770px;
+	height:20px;
+	position:absolute;
+	top:440px;
+	left:50%;
+	transform:translate(-50%);
+	z-index:50;
+	opacity: 0.9;
+}
+.an .b_icon ul{
+	width:calc(100% - 20px);
+	height:10px;
+	margin:0 auto;
+	margin-top:10px;
+}
+.an .b_icon ul li{
+	width:120px;
+	height:7px;
+	float:left;
+	background:#e4eec2;
+	margin-left:20px;
+	cursor: pointer;
+	border-radius: 4px;
+	transition:0.3s;
+	
+}
+
+/*轮播图片*/
+.bannercontent{
+	width:1200px;
+	height:500px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+.bannercontent ul{
+	width:6000px;
+	height:500px;
+	position:absolute;
+
+}
+
+.bannercontent ul li{
+	float:left;
+}
+.bannercontent ul li img{
+	display: block;
+}
+
+/*左右按钮*/
+.left_btn,.right_btn{
+	position:absolute;
+	width:80px;
+	height:80px;
+	line-height:80px;
+	text-align:center;
+	color:white;
+	background: rgba(0,0,0,.4);
+	top:0;
+	font-size:50px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.left_btn{
+	top:50%;
+	transform: translateY(-50%);
+}
+.right_btn{
+	right:0;
+	top:50%;
+	transform: translateY(-50%);
+}
+
+.left_btn:hover,.right_btn:hover{
+	background: rgba(161,186,131,.4);
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>结课作业</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Chushihua.css"/>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	
+	<div id="right-hand">
+		<span onclick="window.location.reload();">弛度首页</span>
+		<span onclick="window.location.reload();">刷新本页</span>
+		<span>新品推荐</span>
+		<span onclick="document.documentElement.scrollTop=0;">返回顶部</span>
+	</div>
+	
+	
+	<!--start header   总高190px-->
+	<div id="header">
+		<div class="headertop">
+			<div class="headcontent">
+				<span>Hi,欢迎进入作业网站 请  <a href="javascript:;">登录</a>  | <a href="javascript:;">免费注册</a> 关注我：QQ-1621300868</span> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="logo"><img src="images/logo.png"/></div>
+			<div class="ppby">岁月静好   张弛有度</div>
+			<div class="search">
+				<input type="text" placeholder="请输入搜索内容" class="nav-form" />
+				<button><img src="images/seach.png"/></button>
+			</div>
+			
+			<p class="clearfix"></p>
+		</div>
+		<div class="nav">
+			<div class="navcontent">
+				<div class="n-first">打开下拉菜单X
+					<!--侧边栏-->
+					<div class="sidebar">
+	
+					</div>
+					<!--end 侧边栏-->
+				</div>
+					<ul>
+						<li>首页</li>
+						<li>了解弛度</li>
+						<li>旗舰店查询
+							<div class="navbar">
+								<span>贵阳旗舰店</span>
+								<span>上海旗舰店</span>
+								<span>深圳旗舰店</span>
+							</div>
+						</li>
+						<li>客户服务
+							<div class="navbar">
+								<span>服务方式</span>
+								<span>在线咨询</span>
+								<span>离线留言</span>
+							</div>
+						</li>
+						<li>关于我们</li>
+						<li>限时特卖
+							<div class="navbar">
+								<span>机械工艺</span>
+								<span>在线咨询</span>
+								<span>离线留言</span>
+							</div>
+						</li>
+						<p class="clearfix"></p>
+						<div class="navfloat"></div>
+					</ul>	
+					
+			</div>
+		</div>
+	</div>
+	<!--end header-->
+	
+
+	<!--start header   height:500px-->
+	
+	<div class="banner">
+		<!--背景模糊的效果-->
+		<div class="bgimg"></div>
+		
+		<!--悬浮按钮区域-->
+		<div class="an">
+			<!--左右按钮-->
+			<div class="left_btn">&lt;</div>
+			<div class="right_btn">&gt;</div>
+			
+			<!--banner圆点-->
+			<div class="b_icon">
+				<ul>
+					<li style="background:#d93600"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<!--图片内容区-->
+		<div class="bannercontent">
+			<ul>
+				<li><img src="images/banner-1.jpg"/></li>
+				<li><img src="images/banner-2.jpg"/></li>
+				<li><img src="images/banner-3.jpg"/></li>
+				<li><img src="images/banner-4.jpg"/></li>
+				<li><img src="images/banner-5.jpg"/></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+</body>
+<script type="text/javascript">
+$(function(){
+		
+	//banner图片宽
+		var img_width = 1200;
+		var subfloat = $(".navfloat");//导航下浮动条
+		var list =0;//计点击次数用
+		var timer;//定义计时器
+		var menuobj = document.getElementById("right-hand");
+		
+		$(".navbar").hide();
+		$(".sidebar").hide();
+		
+		
+		//右键菜单
+		document.oncontextmenu = function(event){
+			x=event.clientX;
+			y=event.clientY;
+			menuobj.style.display = "block";
+			menuobj.style.left=x+"px";
+			menuobj.style.top=y+"px";
+			
+			return false;//取消默认菜单
+		}
+		document.onclick=function(){
+			menuobj.style.display = "none";
+		}
+		
+		
+		//导航栏
+		$(".navcontent li").mouseenter(function(){
+			var navsub = $(this).index();
+			var shift = 100;	//固定偏移量
+			//导航下条 
+			subfloat.stop().animate({"left":shift*navsub+"px"});
+			//下拉显示
+			$(this).children(".navbar").stop(true,true).slideDown();
+			//文字变色
+			$(this).css({"color":"#008B8B"});
+			
+		})
+		
+		
+		$(".navcontent li").mouseleave(function(){
+			//文字变色
+			$(this).css({"color":"#000000"});
+			//导航下条回到原来位置
+			subfloat.stop().animate({"left":"0px"},300);
+			//下拉隐藏
+			$(this).children(".navbar").stop(true,true).slideUp(200);
+		})
+		
+		
+		//下拉左边：
+		$(".n-first").click(function(){
+			$(".sidebar").stop(true,true).slideToggle(600);
+		})
+		
+		
+		//轮播图部分
+		
+		$(".left_btn").click(function(){
+			list++;
+			if(list>0){
+				list=-4;
+			}
+			move(list);
+			icon(-list);
+			//改变banner背景
+			bgimg(-list);
+		})
+		
+		$(".right_btn").click(function(){
+			list--;
+			//当轮播到第五张的时候   回到第一张继续
+			if(list<-4){
+				list=0;
+			}
+			move(list);
+			//操作圆点 
+			icon(-list);
+			//改变banner背景
+			bgimg(-list);
+		})
+		
+		function move(list){
+			$(".bannercontent ul").stop().animate({"left":list*img_width+'px'});
+		}
+		
+		//点击圆点：
+		$(".b_icon ul li").click(function(){
+			$(this).css({"background":"#d93600"}).siblings().css({"background":"#e4eec2"});
+			var li_index = $(this).index();
+			move(-li_index);
+			bgimg(li_index);
+		})
+		
+		
+		function icon(a){
+			$(".b_icon ul li").eq(a).css({"background":"#d93600"}).siblings().css({"background":"#e4eec2"});
+		}//图标自动变色函数		
+	
+		function play(){
+			timer = setInterval(function(){
+			list--;
+			//当轮播到第五张的时候   回到第一张继续
+			if(list<-4){
+				list=0;
+			}
+			move(list);
+			//操作圆点 
+			icon(-list);
+			
+			bgimg(-list);
+			},2000);
+		}
+		
+		//当鼠标移入的时候  将定时器清除
+		$(".banner").mouseenter(function(){
+			clearInterval(timer);
+		})
+		$(".banner").mouseleave(function(){
+			play();
+		})
+		play();
+		//banner背景毛玻璃效果：
+
+	function bgimg(cont){
+		var c =$(".bannercontent ul li img").eq(cont).attr("src");
+		$(".bgimg").css({"background":"url("+c+")"})
+	}
+})	
+</script>
+
+</html>

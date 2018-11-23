@@ -1,0 +1,41 @@
+* {
+	margin:0;
+	padding:0;
+}
+a {
+	text-decoration:none;
+}
+a img {
+border:none;
+}
+ol, ul, li {
+	list-style-type:none;
+}
+body {
+	font-size:14px;
+	cursor: url("../images/Handwriting.cur"),auto;
+}
+
+#right-hand{
+	width:100px;
+	height:180px;
+	background:#272822;
+	text-align: center;
+	padding-top:20px;
+	position:fixed;
+	top:0px;
+	color:white;
+	opacity:0.9;
+	z-index:50;
+	display: none;
+}
+#right-hand span{
+	display: block;
+	width:100px;
+	height:40px;
+	line-height:40px;
+	transition: .3s;
+}
+#right-hand span:hover{
+	background:#FF6600;
+}
