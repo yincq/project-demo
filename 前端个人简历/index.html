@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>你好,欢迎来到二次元风前端求职简历网站</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <meta name="apple-mobile-app-capable" content="yes">
+
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+
+    <meta name="description" content="这是一个你不能进的网站  因为你会后悔的哈哈哈 ">
+    <meta name="keywords" content="二次元，宅属性，前端，编程，全栈，绘画，设计">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+    <meta name="author" content="document.xh.zh1601">
+	
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/process.css">
+    
+    <!--载入图标-->
+    <link rel="shortcut icon"  type="image/x-icon" href="favicon.ico" />
+    
+    <script type="text/javascript">
+        
+        document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/20 + 'px';
+       
+    </script>
+	<style type="text/css">
+		body{
+			cursor: url("images/upload/Handw
+		}
+		*{riting.cur"),auto;
+			user-select:none;    
+		}
+		#right-hand{
+			width:100px;
+			height:180px;
+			background:#272822;
+			text-align: center;
+			font-size:14px;
+			padding-top:20px;
+			position:fixed;
+			top:0px;
+			color:white;
+			opacity:0.9;
+			z-index:50;
+			transition:0.3s;
+			display: none;
+		}
+		#right-hand span{
+			display: block;
+			width:100px;
+			height:40px;
+			line-height:40px;
+			transition: .3s;
+		}
+		#right-hand span:hover{
+			background:#FF6600;
+		}
+		@keyframes dh{
+			0%{
+				top:0px;
+				left:80px;	
+			}
+			20%{
+				top:80px;
+				left:80px;
+			}
+			40%{
+				top:30px;
+				left:80px;
+			}
+			60%{
+				top:90px;
+				left:80px;
+				transform: rotate(10deg);
+			}
+			80%{
+				top:0px;
+				left:80px;
+			}
+			95%{
+				top:40px;
+				left:80px;
+			}
+			100%{
+				top:20px;
+				left:80px;
+			}
+		}
+		#right-hand .cd-y{
+			position:absolute;
+			top:40px;
+			left:80px;
+			
+		}
+		#right-hand .cd-y img{
+			width:200px;
+		}
+		#right-hand:hover .cd-y{
+			animation:dh 3s infinite;
+		}
+	</style>
+</head>
+<body>
+<!-- 比较个性化的二次元风格网站，适合受众 90后 00后
+	从受众分析来看，90后 00后不会认大咖，只会认大神，只会看自己感兴趣的。、
+	你通过加薪是管不好90后的。90后要的是做得开心。比较个性
+  -->
+	<!--功能区实现-->
+	<div id="right-hand">
+		<div class="cd-y"><img src="images\upload\162.png"></div>
+		<span onclick="window.location.reload();">你你你！</span>
+		<span onclick="window.location.reload();">你右键干嘛</span>
+		<span>hentai!!</span>
+		<span onclick="document.documentElement.scrollTop=0;">快走开！</span>
+	</div>
+	<script>
+		var menuobj = document.getElementById("right-hand");
+		document.oncontextmenu = function(event){
+			x=event.clientX;
+			y=event.clientY;
+			menuobj.style.display = "block";
+			menuobj.style.left=x+"px";
+			menuobj.style.top=y+"px";
+			
+			return false;//取消默认菜单
+		}
+		document.onclick=function(){
+			menuobj.style.display = "none";
+			
+		}
+	
+	</script>
+	
+	<!--头部开始-->
+	<div class="head">
+        <div class="head_logo_div">
+            <img class="logo_img" src="images/upload/head.jpg">
+        </div>
+        <div class="head_nav_div">
+             <nav class="head_nav">
+                <ul id="nav_ul">
+                    <li class="nav_li_on nav_ul_li">展示</li>
+                    <li class="nav_ul_li">技能</li>
+                    <li class="nav_ul_li">经历</li>
+                    <li class="nav_ul_li">我的爱好</li>
+                    <li class="nav_ul_li">联系方式</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--头部 结束-->
+    <ul class="float_btn" id="float_btn">
+        <li class="btn_on"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    
+    <div class="wrapBox" id="wrapBox">
+        <div class="box">
+            <img class="box_bg" src="images/upload/2.png">
+            <div class="box01_content">
+                <div class="head_div">
+                    <div class="cycle_item">
+                        <a href="javascript:;" class="github_a" id="github_a" target="_blank">
+                            <span class="github_icon"></span>
+                            <span class="github_text"><p class="item_name">GitHub</p></span>
+                        </a>
+                        <a href="javascript:;" class="weibo_a" id="weibo_a" target="_blank">
+                            <span class="weibo_icon"></span>
+                            <span class="weibo_text"><p class="item_name">微博</p> </span>
+                        </a>
+                        <a href="javascript:;" class="blog_a" id="blog_a" target="_blank">
+                            <span class="blog_icon"></span>
+                            <span class="blog_text"><p class="item_name"> 博客</p></span>
+                        </a>
+
+                        <div class="green_cycle">
+                            <img class="green_cycle_img" src="images/icon/green_cycle.svg">
+                            <div class="yellow_cycle">
+                                <img class="yellow_cycle_img" src="images/icon/yellow_cycle.svg">
+                                <div class="blue_cycle">
+                                    <img class="blue_cycle_img" src="images/icon/blue_cycle.svg">
+                                    <div class="head_img_div">
+                                        <img class="head_img" src="images/upload/head.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<!--首屏文字开始-->
+                <h1 class="title">Miracle</h1>
+                <h2 class="title_h2">没有执行的想法只不过是幻觉</h2>
+                <div id="box01_text">
+	                <p class="box01_p">前端/设计/运营.</p>
+	                <p class="box01_p">学习能力强，能啃厚本专业书籍</p>
+	                <p class="box01_p">应聘贵公司前端开发岗位.</p>
+                </div>
+				<!--首屏文字结束-->
+            </div>
+            <div class="arrow_div">
+                <img class="arrow_img" src="images/icon/arrowhead.png">
+            </div>
+        </div>
+        
+        <div class="box">
+            <img class="box_bg" src="images/upload/2231.png">
+            
+            <div class="box02_content box_content">
+                <div id='bar_container' class="bar_container">
+                    <div class='bar mint' data-percent='90' data-skill='HTML5+CSS3'></div>
+                    <div class='bar red' data-percent='80' data-skill='JavaScript'></div>
+                    <div class='bar lila' data-percent='70' data-skill='PHP编程'></div>
+                    <div class='bar orange' data-percent='65' data-skill='营销策划/文案'></div>
+                    <div class='bar gray' data-percent='70' data-skill='百度竞价SEM'></div>
+                    <div class="bar mint" data-percent='80' data-skill='PS&AE&PR&AI$Flash'></div>
+                    <div class="bar green" data-percent='70' data-skill='绘画'></div>
+                </div>
+                <div id="box02_text">
+                    <h1>关于 我的技能</h1>
+                    <div class="overline"></div>
+                    <p>我是设计师出身，偏向前端</p>
+                    <p>刻苦钻研行业内部知识</p>
+                    <p>能独立开发中小型企业网站</p>
+                    <p>网站界面的优化与设计</p>
+                    <p>网站UI界面与动效设计</p>
+                    <p>二次元手绘插画 写实原画设计</p>
+                    <p>熟练各种交互设计软件</p>
+                    <p>PR，AE，AU，axure，flash</p>
+                    <p>熟悉网站后端编程，独立完成各种接口</p>
+                    <p>平面包装海报画册设计也不在话下</p>
+                    <p>企业网站营销策划与宣传方案</p>
+                    <p>拥有丰富的行业实践经验</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="arrow_div">
+                <img class="arrow_img" src="images/icon/arrowhead.png">
+            </div>
+            
+        </div>
+        
+        <div class="box">
+            <img class="box_bg" src="images/upload/pic_3.jpg">
+            
+            <div class="box_content box03_content">
+                <ul id="timeUl" class="timeUl">
+                    <li>
+                        <div>
+                            <h1>2016-2018</h1>
+                            <p>贵州新华电脑学院</p>
+                            <p>互联网营销专业</p>
+                            <p>专修网站前端HTML5 CSS3 JavaScript</p>
+                            <p>同时学习网站UI设计，动效设计<p>
+                            <p>以及网络营销学习</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h1>2017-2018</h1>
+                            <p>第四十五届世界技能大赛</p>
+                            <p>贵州赛区平面设计选拔赛</p>
+                            <p>省赛一等奖</p>
+							<p>代表贵州参加第四十五届世界技能大赛全国选拔赛</p>
+                        </div>
+                    </li>
+                    <li>
+                       <div>
+                            <h1>2016-2017</h1>
+                            <p>参与校园“枫叶”团队建设</p>
+                            <p>协助团队在"苏宁杯"</p>
+                            <p>贵州赛区第一名</p>
+                     		<p>全国赛区三等奖</p>
+                     		<p>"枫叶"微信公众号运营一年</p>
+                        </div>
+                    </li>
+                    <li>
+                       <div>
+                            <h1>未来</h1>
+                            <p>成为前端领域专家</p>
+							<p>成为项目主导</p>
+                            <p>...</p>
+                        </div>
+                    </li>
+                </ul>
+                 <div class="left_div" id="left_div">
+                     <img class="left_arrow" src="images/icon/arrowleft.png">
+                 </div>
+                 <div class="right_div" id="right_div">
+                      <img class="right_arrow" src="images/icon/arrowright.png">
+                 </div>
+            </div>
+            
+             <div class="arrow_div">
+                <img class="arrow_img" src="images/icon/arrowhead.png">
+            </div>
+        </div>
+        
+        
+        <div class="box">
+            
+            <img class="box_bg" src="images/upload/pic_41.jpg">
+            <div class="box_content box04_content">
+                <h1 class="box04_title">Something Of Hobby</h1>
+                <ul class="hobby_content">
+                    <li class="hobby_01">
+                        <div class="hobby_img_div">
+                            <div class="spinner spinner_01"></div>
+                            <div class="hobby_img">
+                                <img src="images/upload/kapok.jpg">
+                            </div>
+                            <div class="hobby_img_info">
+                                <h1>绘画</h1>
+                                <h2>板绘&CG</h2>
+                            </div>
+                        </div>
+                        <div class="hobby_text_div">
+                            <div class="hobby_img_info_mob">
+                                <h1>绘画/<a>手绘&CG</a></h1>
+                            </div>
+                            <p class="about_p">
+								非常热爱绘画，目前擅长画风有日系赛璐璐风，日系伪厚涂风，日系色彩体现风，游戏原画，卡牌设计
+                            </p>
+                            <p>
+							擅长使用photoshop/sai进行绘画                                
+                            </p>
+                        </div>
+                    </li>
+                    <li class="hobby_02">
+                        <div class="hobby_img_div">
+                            <div class="spinner spinner_02"></div>
+                            <div class="hobby_img">
+                                <img src="images/upload/acg.png">
+                            </div>
+                            <div class="hobby_img_info">
+                                <h1>ACG</h1>
+                                <h2>动漫&视频</h2>
+                            </div>
+                        </div>
+                        <div class="hobby_text_div">
+                            <div class="hobby_img_info_mob">
+                                <h1>ACG/<a>动漫&视频</a></h1>
+                            </div>
+                            <p class="about_p">
+                                入宅作忘记了，可能是悠哉日常，喜欢弄些视频剪辑，也喜欢在bilibili上录制自己的教程，最近时间不够了就没怎么更新了
+                            </p>
+                            <p>
+                               熟练pr，ae，flash及影视级特效
+                            </p>
+                        </div>
+                    </li>
+                    <li class="hobby_03">
+                        <div class="hobby_img_div">
+                            <div class="spinner spinner_03"></div>
+                            <div class="hobby_img">
+                                <img src="images/upload/reading.jpg">
+                            </div>
+                            <div class="hobby_img_info">
+                                <h1>文学</h1>
+                                <h2>历史&写作</h2>
+                            </div>
+                        </div>
+                        <div class="hobby_text_div">
+                            <div class="hobby_img_info_mob">
+                                <h1>阅读/写作</h1>
+                            </div>
+                            <p class="about_p">
+                          平时喜欢阅读非虚构类书籍，喜欢阅读国外文献与技术文档，英语水平还能够读懂
+                            </p>
+                            <p>
+                                此外也会写教程和一些杂七杂八的文章.目前已经累计写了100万字的教程，放在自己的文件库中
+                            </p>
+                        </div>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+             <div class="arrow_div">
+                <img class="arrow_img" src="images/icon/arrowhead.png">
+            </div>
+        </div>
+		
+        <!--start foot-->
+        <div id="foot" class="foot">
+            <h1 class="foot_title">Contact With Me</h1>
+            <div class="foot_info_main">
+                <ul>
+                    <li class="github_items">
+                        <a href="javascript:;" target="_blank">GitHub</a>
+                    </li>
+                    <li class="google_items">
+                        <a href="javascript:;" target="_blank">Google+</a>
+                    
+                    </li>
+                    <li class="twitter_items">
+                        <a href="javascript:;" target="_blank">Twitter</a>
+                    
+                    </li>
+                    <li class="facebook_items">
+                        <a href="javascript:;" target="_blank">FaceBook</a>
+                    
+                    </li>
+                    <li class="weibo_items">
+                        <a href="javascript:;" target="_blank">微博</a>
+                    
+                    </li>
+                    <li class="zhihu_items">
+                        <a href="javascript:;" target="_blank">知乎</a>
+                    
+                     </li>
+                     <li class="blog_items">
+                        <a href="javascript:;" target="_blank">博客</a>
+                    
+                     </li>
+                     <li class="email_items">
+                        <a href="mailto:1621300868@qq.com" target="_blank">邮箱</a>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="qrcode_div">
+                    <span class="weixin">
+                        <a class="weixin_icon"></a>
+                        <img class="weixin_img" src="images/upload/wx.jpg">
+                    </span>
+                    <span class="dingding">
+                        <a class="dingding_icon"></a>
+                        <img class="dingding_img" src="images/upload/wx.jpg">
+                    </span>
+                    <span class="qq">
+                        <a class="qq_icon"></a>
+                        <img class="qq_img" src="images/upload/qq.jpg">
+                    </span>
+                </div>
+            </div>
+            <div class="foot_power">
+                <h3>©2018 Pwoerd 
+                    <a href=javascript:;" title="Night" target="_blank"> Night's</a>
+                    <a href="javascript:;" title="IceEnd">2333333</a>
+                    <a href=javascript:;" title="beian" target="_blank">版权所有 miracle</a>
+                </h3>
+            </div>
+        </div>
+		<!--end foot-->
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+    
+</html>
+
+ 
